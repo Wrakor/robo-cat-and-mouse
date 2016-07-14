@@ -1,0 +1,7 @@
+#!/bin/bash
+cd ~/Documents/ros-workspace &
+source devel/setup.bash
+rosrun simple_robot cat_exe &
+rosrun simple_robot cat2_exe &
+rosrun simple_robot mouse &
+rosrun simple_robot mouse2

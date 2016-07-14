@@ -1,0 +1,13 @@
+#!/bin/bash
+roslaunch stdr_launchers server_no_map.launch &
+sleep 3
+rosrun stdr_server load_map ~/Documents/ros-workspace/rectangle.yaml &
+roslaunch stdr_gui stdr_gui.launch &
+rosrun stdr_robot robot_handler add ~/Documents/ros-workspace/cat_robot.xml 5 5 1.57 
+rosrun stdr_robot robot_handler add ~/Documents/ros-workspace/cat_robot.xml 25 15 1.57
+rosrun stdr_robot robot_handler add ~/Documents/ros-workspace/mouse_robot.xml 25 5 1.57 
+rosrun stdr_robot robot_handler add ~/Documents/ros-workspace/mouse_robot.xml 5 15 1.57
+#rosrun stdr_robot robot_handler add /opt/ros/indigo/share/stdr_resources/resources/robots/simple_robot.xml 5 5 1.57 
+
+
+
